@@ -1,6 +1,6 @@
 # Design-Patterns-Problems
 
-
+## Notes
 ## 1. Interface:
 
 An interface is a contract that specifies a set of methods that a class must implement, without dictating how these methods should be implemented. In languages like Python, interfaces are typically represented using abstract base classes (ABCs) with abstract methods.
@@ -22,9 +22,10 @@ Use Case: When you want to provide shared code among related classes, but also w
 
 Example: Suppose you have a base class Shape with a method area() that must be implemented by all shapes (like Circle, Square). You can define Shape as an abstract class with a concrete method describe() and an abstract method area().
 
-# Books.py follows Strategy Pattern
+# Strategy Pattern
 
-## Explanation:
+## Books.py follows Strategy Pattern
+### Explanation:
 **Strategy Design Pattern**:
 
 The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. The algorithm can vary independently from clients that use it.
