@@ -1,6 +1,9 @@
 from abc import ABC, abstractmethod  # Importing Abstract Base Class (ABC) and abstractmethod decorator
 from typing import List, Set  # Importing List and Set types for type hints
 
+#Strategy Pattern lets you choose from different ways of doing something 
+# (like paying with different methods) 
+# and easily switch between them without changing the main part of your code.
 
 # Book class represents a book with a title and page count
 class Book:

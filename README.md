@@ -40,6 +40,16 @@ Example: Suppose you have a base class Shape with a method area() that must be i
 **Strategy Design Pattern**:
 
 The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. The algorithm can vary independently from clients that use it.
+
+The Strategy Pattern is a design pattern that allows you to define a family of algorithms, put each of them in a separate class, and make their objects interchangeable. In simpler terms, it's like having multiple ways to do something, and you can choose which way to use without changing the code that uses it.
+
+**How It Works**:
+- Define a Strategy Interface: Create an interface (or abstract class) that all strategies (different ways of doing something) will follow. This interface defines a method that all the strategies will implement in their own way.
+
+- Create Concrete Strategies: Implement the strategy interface in different classes, each with its own version of the method. These classes represent different strategies (different ways of doing something).
+
+- Context Class: This class uses a strategy. It doesn't know how the strategy works internally; it just uses the method from the strategy interface. The context class can be configured with any concrete strategy.
+
 Why This Code Uses the Strategy Pattern:
 
 - Encapsulation of Algorithms: The BookFilter abstract class defines an interface for filtering strategies. The specific filter implementations (TitleFilter and BookSizeFilter) encapsulate different filtering strategies (by title and by size).
@@ -52,6 +62,12 @@ Why This Code Uses the Strategy Pattern:
 - Strategy Interface: The BookFilter abstract class serves as the strategy interface, defining the method apply that all concrete strategies must implement.
 
 - Concrete Strategies: The TitleFilter and BookSizeFilter classes are concrete strategies that implement the BookFilter interface, each providing its own filtering logic.
+
+**Discount_strategy.py uses Strategy Pattern**:
+
+- Strategy Interface (DiscountStrategy): Defines the common interface that all discount strategies must implement.
+- Concrete Strategies (RegularDiscount, ChristmasDiscount, NoDiscount): These are the different algorithms or strategies, each in its own class.
+- Context (Order): Uses a strategy object to apply the discount. The Order class doesn’t care which discount strategy is being used; it just knows how to interact with the strategy.
 
 **Benefits of Using the Strategy Pattern**:
 - Open/Closed Principle: You can add new filter types (strategies) without altering existing code, adhering to the open/closed principle.
@@ -73,3 +89,16 @@ You need to ensure that there is only one instance of a class, and provide a glo
 
 The __new__ method ensures that only one instance of the Logger class is created.
 When Logger() is called, the class checks if an instance already exists. If not, it creates one; otherwise, it returns the existing instance.
+
+# Factory Pattern: 
+
+Provides an interface for creating objects in a super class but allows subclasses to alter the type of objects that will be created. It decouples the client code from the specific classes it needs to instantiate.
+
+## Explanation of Document_Factory.py
+Document is an abstract base class (ABC) with an abstract method create.
+
+WordDocument, PDFDocument, and ExcelDocument are concrete implementations of the Document class.
+
+DocumentFactory is a factory class with a static method get_document that returns an instance of the requested document type.
+The DocumentFactory class contains a static method get_document that returns the appropriate document type based on the input, allowing the client code to remain decoupled from the specific implementations.
+This allows the client code to create objects without needing to know the specific class of object being created.
