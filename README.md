@@ -63,7 +63,7 @@ Why This Code Uses the Strategy Pattern:
 
 - Concrete Strategies: The TitleFilter and BookSizeFilter classes are concrete strategies that implement the BookFilter interface, each providing its own filtering logic.
 
-**Discount_strategy.py uses Strategy Pattern**:
+## Discount_strategy.py uses Strategy Pattern:
 
 - Strategy Interface (DiscountStrategy): Defines the common interface that all discount strategies must implement.
 - Concrete Strategies (RegularDiscount, ChristmasDiscount, NoDiscount): These are the different algorithms or strategies, each in its own class.
@@ -83,9 +83,7 @@ Design a logging system where there should be only one instance of the logger, r
 ## Explanation: 
 You need to ensure that there is only one instance of a class, and provide a global point of access to that instance.
 
-**In Logger_Singleton.py**
-
-## Explanation:
+## In Logger_Singleton.py:
 
 The __new__ method ensures that only one instance of the Logger class is created.
 When Logger() is called, the class checks if an instance already exists. If not, it creates one; otherwise, it returns the existing instance.
