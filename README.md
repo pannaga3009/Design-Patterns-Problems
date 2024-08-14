@@ -1,5 +1,16 @@
 # Design-Patterns-Problems
 
+## What Are Design Patterns?
+Design patterns are reusable solutions to common problems that occur in software design. They represent best practices used by experienced object-oriented software developers. Design patterns are like templates that can be applied to real-world programming scenarios, helping to solve recurring design challenges in a systematic way.
+
+Why Are They Used?
+Design patterns are used to:
+
+- Promote Reusability: By using patterns, you can reuse proven solutions across different projects, reducing the need to solve the same problem multiple times.
+- Improve Code Readability and Maintainability: Patterns provide a standard way of structuring code, which makes it easier to understand, maintain, and extend.
+- Facilitate Communication: Patterns provide a common language for developers to discuss design solutions, improving communication and collaboration.
+- Encourage Best Practices: Patterns are based on best practices, helping to avoid common pitfalls and leading to more robust software designs.
+  
 ## Notes
 ## 1. Interface:
 
