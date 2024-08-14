@@ -57,3 +57,19 @@ Why This Code Uses the Strategy Pattern:
 - Open/Closed Principle: You can add new filter types (strategies) without altering existing code, adhering to the open/closed principle.
 - Reusability: The filter strategies are reusable across different contexts where book filtering might be needed.
 - Maintainability: The filtering logic is decoupled from the main application logic, making the code easier to maintain and extend.
+
+# Singleton Pattern
+The Singleton pattern ensures that a class has only one instance and provides a global point of access to that instance.
+
+## Problem: 
+Design a logging system where there should be only one instance of the logger, regardless of how many times it is accessed throughout the application.
+
+## Explanation: 
+You need to ensure that there is only one instance of a class, and provide a global point of access to that instance.
+
+**In Logger_Singleton.py**
+
+## Explanation:
+
+The __new__ method ensures that only one instance of the Logger class is created.
+When Logger() is called, the class checks if an instance already exists. If not, it creates one; otherwise, it returns the existing instance.
