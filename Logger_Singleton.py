@@ -44,9 +44,6 @@ class Example:
         self.data = args if args else kwargs
 
 
-
-
-
 if __name__ == "__main__":
     # Usage
     logger1 = Logger()  # Creates the first instance of Logger

@@ -25,6 +25,33 @@ class ExcelDocument(Document):
 
 # Factory
 class DocumentFactory:
+    """
+   1.  Abstract Product (Document):
+
+    This is an abstract class that defines the interface (i.e., the create method) 
+    for all document types.
+    The Document class uses the @abstractmethod decorator, ensuring that any subclass 
+    must implement the create method.
+
+   2.  Concrete Products (WordDocument, PDFDocument, ExcelDocument):
+
+    These are the concrete implementations of the Document abstract class. Each one 
+    overrides the create method to return a specific message indicating the type of 
+    document created.
+    
+    3. Factory (DocumentFactory):
+
+    This is a factory class that provides a static method get_document to create and 
+    return instances of different document types based on a string input (doc_type).
+    The factory abstracts the creation logic from the client, allowing for more 
+    flexibility and easier maintenance.
+
+    Usage:
+
+    The client code (inside the if __name__ == "__main__": block) interacts only with 
+    the DocumentFactory, not directly with the concrete product classes.
+    The factory decides which document to create based on the provided input.
+    """
     @staticmethod
     def get_document(doc_type):
         # Static method to get the appropriate document type based on the input string

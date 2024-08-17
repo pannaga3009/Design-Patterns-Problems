@@ -92,6 +92,8 @@ When Logger() is called, the class checks if an instance already exists. If not,
 
 Provides an interface for creating objects in a super class but allows subclasses to alter the type of objects that will be created. It decouples the client code from the specific classes it needs to instantiate.
 
+The Factory Pattern is a creational design pattern that provides an interface for creating objects, but allows subclasses to alter the type of objects that will be created. In simpler terms, it helps you create objects without specifying the exact class of the object that will be created. 
+
 ## Explanation of Document_Factory.py
 Document is an abstract base class (ABC) with an abstract method create.
 
